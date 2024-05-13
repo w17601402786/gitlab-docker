@@ -19,6 +19,23 @@ docker run -d \
            -v GITLAB_LOG:/var/log/gitlab \
            -v $GITLAB_DATA:/var/opt/gitlab \
            gitlab/gitlab-ce:latest
+
+```
+
+```bash
+docker run -d \
+           -h gitlab \
+           -p 443:443 \
+           -p 80:80 \
+           -p 222:22 \
+           --name gitlab \
+           --restart always \
+           -v C:\Users\Adrian.wang\gitlab-docker\gitlab\config\config:/etc/gitlab \
+           -v C:\Users\Adrian.wang\gitlab-docker\gitlab\config\log:/var/log/gitlab \
+           -v C:\Users\Adrian.wang\gitlab-docker\gitlab\config\data:/var/opt/gitlab \
+           gitlab/gitlab-ce:latest
+
+
 ```
 
 ## 安装 gitlab-runner
